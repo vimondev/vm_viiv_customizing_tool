@@ -1,0 +1,6 @@
+enum EMetaType {
+  IMAGE,
+  VIDEO,
+  STICKER,
+  MOVING_STICKER
+}
