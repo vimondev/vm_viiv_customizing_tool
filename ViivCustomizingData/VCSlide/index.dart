@@ -120,4 +120,18 @@ class VCSlide {
       this.deleteSticker(0);
     }
   }
+
+  String toString() {
+    String result = "[VCSlide]\n  duration: ${this._duration}\n";
+    for (int i = 0; i < this._media.length; i++) {
+      result += "  [MEDIA${i + 1}] " + this._media[i].toString() + "\n";
+    }
+    for (int i = 0; i < this._texts.length; i++) {
+      result += "  [TEXT${i + 1}] " + this._texts[i].toString() + "\n";
+    }
+    for (int i = 0; i < this._stickers.length; i++) {
+      result += "  [STICKER${i + 1}] " + this._stickers[i].toString() + "\n";
+    }
+    return result;
+  }
 }

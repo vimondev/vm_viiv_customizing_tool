@@ -30,4 +30,8 @@ class VCText extends VCInteractionObject {
 
   String get jsonPath { return this._jsonPath; }
   set jsonPath(String value) { this._jsonPath = value; }
+
+  String toString() {
+    return "[VCText] text: " + this._text + ", jsonPath: " + this._jsonPath + ", " + super.toString();
+  }
 }

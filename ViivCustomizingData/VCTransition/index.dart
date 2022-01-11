@@ -26,4 +26,8 @@ class VCTransition {
 
   double get transitionPoint { return this._transitionPoint; }
   set transitionPoint(double value) { this._transitionPoint = value; }
+
+  String toString() {
+    return "[VCTransition] absolutePath : " + this._absolutePath + ", inPoint: " + this._inPoint.toString() + ", duration: " + this._duration.toString() + ", transitionPoint: " + this._transitionPoint.toString();
+  }
 }

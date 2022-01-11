@@ -31,4 +31,8 @@ class VCSticker extends VCInteractionObject {
 
   EMetaType get type { return this._type; }
   set type(EMetaType value) { this._type = value; }
+
+  String toString() {
+    return "[VCSticker] absolutePath: " + this._absolutePath + ", type: " + this._type.toString() + ", " + super.toString();
+  }
 }

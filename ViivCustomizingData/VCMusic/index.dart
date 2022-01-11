@@ -20,4 +20,8 @@ class VCMusic {
 
   double get startTime { return this._startTime; }
   set startTime(double value) { this._startTime = value; }
+
+  String toString() {
+    return "[VCMusic] absolutePath: $absolutePath, duration: " + this._duration.toString() + ", startTime: " + this._startTime.toString();
+  }
 }

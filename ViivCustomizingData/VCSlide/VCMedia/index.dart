@@ -65,4 +65,8 @@ class VCMedia {
 
   CropData? get cropData { return this._cropData; }
   set cropData(CropData? value) { this._cropData = value; }
+
+  String toString() {
+    return "[VCMedia] absolutePath: " + this._absolutePath + ", width: " + this._width.toString() + ", height: " + this._height.toString() + ", type: " + this._type.toString() + ", duration: " + this._duration.toString() + ", startTime: " + this._startTime.toString() + ", position: " + this._position.toString() + ", scale: " + this._scale.toString() + ", rotation: " + this._rotation.toString() + ", cropData: " + this._cropData.toString();
+  }
 }

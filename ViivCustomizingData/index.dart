@@ -114,4 +114,19 @@ class ViivCustomizingData {
       this.deleteMusic(0);
     }
   }
+
+  String toString() {
+    String result = "[ViivCustomizingData]\n";
+    for (int i = 0; i < this._slides.length; i++) {
+      result += "  [SLIDE${i + 1}] " + this._slides[i].toString() + "\n";
+    }
+    for (int i = 0; i < this._transitions.length; i++) {
+      result += "  [TRANSITION${i + 1}] " + this._transitions[i].toString() + "\n";
+    }
+    result += "\n";
+    for (int i = 0; i < this._music.length; i++) {
+      result += "  [MUSIC${i + 1}] " + this._music[i].toString() + "\n";
+    }
+    return result;
+  }
 }

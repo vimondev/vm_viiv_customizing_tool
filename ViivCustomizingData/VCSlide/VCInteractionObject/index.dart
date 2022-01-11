@@ -38,4 +38,8 @@ class VCInteractionObject {
 
   double? get duration { return this._duration; }
   set duration(double? value) { this._duration = value; }
+
+  String toString() {
+    return "width: " + this._width.toString() + ", height: " + this._height.toString() + ", position: " + this._position.toString() + ", scale: " + this._scale.toString() + ", rotation: " + this._rotation.toString() + ", duration : " + duration.toString();
+  }
 }
