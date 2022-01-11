@@ -30,4 +30,94 @@ class VCSlide {
 
   List<VCSticker> get stickers { return this._stickers; }
   set stickers(List<VCSticker> value) { this._stickers = value; }
+
+  addMedia(VCMedia media) {
+    this._media.add(media);
+  }
+
+  changeMedia(int index, VCMedia media) {
+    if (this._media.length <= index || index < 0) return;
+    this._media[index] = media;
+  }
+
+  moveMedia(int fromIndex, int toIndex) {
+    if (
+        this._media.length <= fromIndex || fromIndex < 0 ||
+        this._media.length <= toIndex || toIndex < 0
+    ) return;
+    VCMedia media = this._media[fromIndex];
+    this._media.removeAt(fromIndex);
+    this._media.insert(toIndex, media);
+  }
+
+  deleteMedia(int index) {
+    if (this._media.length <= index || index < 0) return;
+    this._media.removeAt(index);
+  }
+
+  deleteAllMedia() {
+    while (this._media.length > 0) {
+      this.deleteMedia(0);
+    }
+  }
+
+  addText(VCText text) {
+    this._texts.add(text);
+  }
+
+  changeText(int index, VCText text) {
+    if (this._texts.length <= index || index < 0) return;
+    this._texts[index] = text;
+  }
+
+  moveText(int fromIndex, int toIndex) {
+    if (
+        this._texts.length <= fromIndex || fromIndex < 0 ||
+        this._texts.length <= toIndex || toIndex < 0
+    ) return;
+    VCText text = this._texts[fromIndex];
+    this._texts.removeAt(fromIndex);
+    this._texts.insert(toIndex, text);
+  }
+
+  deleteText(int index) {
+    if (this._texts.length <= index || index < 0) return;
+    this._texts.removeAt(index);
+  }
+
+  deleteAllTexts() {
+    while (this._texts.length > 0) {
+      this.deleteText(0);
+    }
+  }
+
+  addSticker(VCSticker sticker) {
+    this._stickers.add(sticker);
+  }
+
+  changeSticker(int index, VCSticker sticker) {
+    if (this._stickers.length <= index || index < 0) return;
+    this._stickers[index] = sticker;
+  }
+
+  moveSticker(int fromIndex, int toIndex) {
+    if (
+        this._stickers.length <= fromIndex || fromIndex < 0 ||
+        this._stickers.length <= toIndex || toIndex < 0
+    ) return;
+    VCSticker sticker = this._stickers[fromIndex];
+    this._stickers.removeAt(fromIndex);
+    this._stickers.insert(toIndex, sticker);
+  }
+
+  deleteSticker(int index) {
+    if (this._stickers.length <= index || index < 0) return;
+    this._stickers.removeAt(index);
+  }
+
+  deleteAllStickers() {
+    while (this._stickers.length > 0) {
+      this.deleteSticker(0);
+    }
+  }
 }
