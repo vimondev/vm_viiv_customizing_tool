@@ -333,53 +333,53 @@ export './Constants/index.dart';
 //   slide1.addMedia(media1);
 //   slide1.addMedia(media2);
 //   slide1.addMedia(media3);
-//   slide1.moveMedia(1, 0);
+//   // slide1.moveMedia(1, 0);
 //
 //   slide2.addMedia(media4);
 //   slide2.addMedia(media5);
 //   slide2.addMedia(media6);
-//   slide2.changeMedia(2, media4);
+//   // slide2.changeMedia(2, media4);
 //
-//   slide2.deleteAllMedia();
+//   // slide2.deleteAllMedia();
 //
 //   slide3.addMedia(media7);
 //   slide3.addMedia(media8);
 //   slide3.addMedia(media9);
-//   slide3.deleteMedia(1);
+//   // slide3.deleteMedia(1);
 //
 //   slide1.addText(text1);
 //   slide1.addText(text2);
 //   slide1.addText(text3);
-//   slide1.moveText(1, 0);
+//   // slide1.moveText(1, 0);
 //
 //   slide2.addText(text4);
 //   slide2.addText(text5);
 //   slide2.addText(text6);
-//   slide2.changeText(2, text4);
+//   // slide2.changeText(2, text4);
 //
-//   slide2.deleteAllTexts();
+//   // slide2.deleteAllTexts();
 //
 //   slide3.addText(text7);
 //   slide3.addText(text8);
 //   slide3.addText(text9);
-//   slide3.deleteText(1);
+//   // slide3.deleteText(1);
 //
 //   slide1.addSticker(sticker1);
 //   slide1.addSticker(sticker2);
 //   slide1.addSticker(sticker3);
-//   slide1.moveSticker(1, 0);
+//   // slide1.moveSticker(1, 0);
 //
 //   slide2.addSticker(sticker4);
 //   slide2.addSticker(sticker5);
 //   slide2.addSticker(sticker6);
-//   slide2.changeSticker(2, sticker4);
+//   // slide2.changeSticker(2, sticker4);
 //
-//   slide2.deleteAllStickers();
+//   // slide2.deleteAllStickers();
 //
 //   slide3.addSticker(sticker7);
 //   slide3.addSticker(sticker8);
 //   slide3.addSticker(sticker9);
-//   slide3.deleteSticker(1);
+//   // slide3.deleteSticker(1);
 //
 //   ViivCustomizingData data = new ViivCustomizingData(slides: [], transitions: [], music: []);
 //   data.addSlide(slide1);
@@ -396,9 +396,9 @@ export './Constants/index.dart';
 //   data.addMusic(music2);
 //   data.addMusic(music3);
 //
-//   data.moveMusic(1, 0);
-//   data.changeMusic(0, music2);
-//   data.deleteMusic(1);
+//   // data.moveMusic(1, 0);
+//   // data.changeMusic(0, music2);
+//   // data.deleteMusic(1);
 //
 //   // data.deleteAllMusic();
 //
@@ -406,11 +406,35 @@ export './Constants/index.dart';
 //   data.addTransition(transition2);
 //   data.addTransition(transition3);
 //
-//   data.moveTransition(1, 0);
-//   data.changeTransition(0, transition2);
-//   data.deleteTransition(1);
+//   // data.moveTransition(1, 0);
+//   // data.changeTransition(0, transition2);
+//   // data.deleteTransition(1);
 //
 //   // data.deleteAllTransitions();
 //
+//   print(data.toString());
+//   print("-----------------------------------");
+//   // print(data.getSlide(0));
+//   // print(data.getTransition(0));
+//   // print(data.getMusic(0));
+//   // print(data.getMedia(0, 0));
+//   // print(data.getText(0, 0));
+//   // print(data.getSticker(0, 0));
+//   // data.addMedia(0, media1);
+//   // data.addText(0, text1);
+//   // data.addSticker(0, sticker1);
+//   // data.changeMedia(0, 1, media1);
+//   // data.changeText(0, 1, text1);
+//   // data.changeSticker(0, 1, sticker1);
+//   // data.moveMedia(0, 1, 2);
+//   // data.moveText(0, 1, 2);
+//   // data.moveSticker(0, 1, 2);
+//   // data.deleteMedia(0, 1);
+//   // data.deleteText(0, 1);
+//   // data.deleteSticker(0, 1);
+//
+//   data.deleteAllMedia(0);
+//   data.deleteAllStickers(0);
+//   data.deleteAllTexts(0);
 //   print(data.toString());
 // }
