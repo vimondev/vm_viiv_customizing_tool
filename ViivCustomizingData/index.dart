@@ -1,3 +1,4 @@
+import '../index.dart';
 import 'VCMusic/index.dart';
 import 'VCSlide/index.dart';
 import 'VCTransition/index.dart';
@@ -113,6 +114,114 @@ class ViivCustomizingData {
     while (this._music.length > 0) {
       this.deleteMusic(0);
     }
+  }
+
+  VCSlide? getSlide(int slideIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    return this._slides[slideIndex];
+  }
+
+  VCTransition? getTransition(int transitionIndex) {
+    if (this._transitions.length <= transitionIndex || transitionIndex < 0) return null;
+    return this._transitions[transitionIndex];
+  }
+
+  VCMusic? getMusic(int musicIndex) {
+    if (this._music.length <= musicIndex || musicIndex < 0) return null;
+    return this._music[musicIndex];
+  }
+
+  VCMedia? getMedia(int slideIndex, int mediaIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    if (this._slides[slideIndex].media.length <= mediaIndex || mediaIndex < 0) return null;
+    return this._slides[slideIndex].media[mediaIndex];
+  }
+
+  VCText? getText(int slideIndex, int textIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    if (this._slides[slideIndex].texts.length <= textIndex || textIndex < 0) return null;
+    return this._slides[slideIndex].texts[textIndex];
+  }
+
+  VCSticker? getSticker(int slideIndex, int stickerIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    if (this._slides[slideIndex].stickers.length <= stickerIndex || stickerIndex < 0) return null;
+    return this._slides[slideIndex].stickers[stickerIndex];
+  }
+
+  addMedia(int slideIndex, VCMedia media) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].addMedia(media);
+  }
+
+  addText(int slideIndex, VCText text) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].addText(text);
+  }
+
+  addSticker(int slideIndex, VCSticker sticker) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].addSticker(sticker);
+  }
+
+  changeMedia(int slideIndex, int mediaIndex, VCMedia media) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].changeMedia(mediaIndex, media);
+  }
+
+  changeText(int slideIndex, int textIndex, VCText text) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].changeText(textIndex, text);
+  }
+
+  changeSticker(int slideIndex, int stickerIndex, VCSticker sticker) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].changeSticker(stickerIndex, sticker);
+  }
+
+  moveMedia(int slideIndex, int fromIndex, int toIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].moveMedia(fromIndex, toIndex);
+  }
+
+  moveText(int slideIndex, int fromIndex, int toIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].moveText(fromIndex, toIndex);
+  }
+
+  moveSticker(int slideIndex, int fromIndex, int toIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].moveSticker(fromIndex, toIndex);
+  }
+
+  deleteMedia(int slideIndex, int mediaIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteMedia(mediaIndex);
+  }
+
+  deleteText(int slideIndex, int textIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteText(textIndex);
+  }
+
+  deleteSticker(int slideIndex, int stickerIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteSticker(stickerIndex);
+  }
+
+  deleteAllMedia(int slideIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteAllMedia();
+  }
+
+  deleteAllTexts(int slideIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteAllTexts();
+  }
+
+  deleteAllStickers(int slideIndex) {
+    if (this._slides.length <= slideIndex || slideIndex < 0) return null;
+    this._slides[slideIndex].deleteAllStickers();
   }
 
   String toString() {
